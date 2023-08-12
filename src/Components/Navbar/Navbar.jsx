@@ -23,10 +23,6 @@ const Navbar = () => {
 
 
 
-  const handleLogout = () => {
- 
-    window.location.href = 'https://fall-detection.vercel.app/';
-  };
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -52,7 +48,7 @@ const Navbar = () => {
           
          
             
-            <NavLink to={'/home/fall'} >
+            <NavLink to={'/home/falle'} >
             {isNavOpen ? 'Medical Support' : <FaBriefcaseMedical/>}
             </NavLink>
             <NavLink to="/home/employees" >
@@ -63,7 +59,7 @@ const Navbar = () => {
             
             </NavLink>
             
-          <NavLink onClick={handleLogout}>
+            <NavLink to={'/home/fall'} >
             {isNavOpen ? 'Fall detection' : <GiFalling/>}
             
             

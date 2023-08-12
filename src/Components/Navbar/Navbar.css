@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
       
-    
-    background-color: rgb(32, 4, 33);
+   
+    background-color: rgb(31, 1, 25);
     color: white;
     padding: 0px;
     margin-top: 0px;
@@ -30,8 +30,8 @@
   }
   
   /* ... */
-  
-  
+           
+ 
   
   
   .menu {
@@ -44,8 +44,7 @@
     color: rgb(255, 255, 255);
     font-size: 80%; /* Adjust the font size as needed */
   
-    background-image: linear-gradient(to right, #000000 0%, #140f19  51%, #000000  100%);
-    background-image: linear-gradient(to right, #000000 0%, #53346D  51%, #000000  100%);
+    background-image: linear-gradient(to right, #f24f9e 0%, #c96db7  51%, #f857a6  100%);
     padding: 10px;
     padding-left: 0;
     padding-right: 0;

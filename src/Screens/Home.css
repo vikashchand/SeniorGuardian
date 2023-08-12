@@ -1,11 +1,9 @@
 .home-container {
     display: flex;
    
-    
-
-    background-color: rgb(98, 30, 30);
-    color: white;
-  
+    background: url('../assets/grid.svg');
+   
+    background-color: rgba(171, 47, 151, 0.5);
   }
   
   .content-container {
