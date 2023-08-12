@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import Navbar from '../Components/Navbar/Navbar';
 import Fall from './Fall/Fall';
+import Medical from './Medical/Medical';
+import LandingPage from './Landing Page/LandingPage';
 
 
 const Home = () => {
@@ -24,9 +26,9 @@ const Home = () => {
         <h1>Old Care</h1>
       </div>
         <Routes>
-          
+        <Route path="/" element={<LandingPage/>} />
         <Route path="/fall" element={<Fall/>} />
-       
+        <Route path="/medical" element={<Medical/>} />
         </Routes>
       </div>
       </div>

@@ -50,7 +50,7 @@ const Navbar = () => {
           
          
             
-            <NavLink to={'/home/falle'} >
+            <NavLink to={'/home/medical'} >
             {isNavOpen ? 'Medical Support' : <FaBriefcaseMedical/>}
             </NavLink>
             <NavLink to="/home/employees" >

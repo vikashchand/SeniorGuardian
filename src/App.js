@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NotFound from './Screens/NotFound';
 import Home from './Screens/Home';
+import LandingPage from './Screens/Landing Page/LandingPage';
 
 
 function App() {
