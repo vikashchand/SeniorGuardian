@@ -3,6 +3,7 @@ import './Home.css';
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from '../Components/Navbar/Navbar';
+import Fall from './Fall/Fall';
 
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
       </div>
         <Routes>
           
-         
+        <Route path="/fall" element={<Fall/>} />
        
         </Routes>
       </div>

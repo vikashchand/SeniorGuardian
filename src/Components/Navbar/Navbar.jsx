@@ -5,10 +5,10 @@ import React,{useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css'; // Import the CSS file
 import { FaBars } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
+import { FaBriefcaseMedical } from 'react-icons/fa';
 
-import {HiUserGroup} from 'react-icons/hi';
-import{MdAdminPanelSettings} from 'react-icons/md';
+import {CgGym} from 'react-icons/cg';
+import{AiOutlineShoppingCart} from 'react-icons/ai';
 
 import { AiFillHome } from 'react-icons/ai';
 
@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
  
-    window.location.href = 'http://127.0.0.1:5500/public/Fall/hi.html';
+    window.location.href = 'https://fall-detection.vercel.app/';
   };
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -45,7 +45,7 @@ const Navbar = () => {
     </NavLink>
     <NavLink to={'/home/Customers'} >
        
-    {isNavOpen ? 'Customer Details' : <HiUserGroup/>}
+    {isNavOpen ? 'Track Activities' : <CgGym/>}
 
 
   </NavLink>
@@ -53,10 +53,10 @@ const Navbar = () => {
          
             
             <NavLink to={'/home/fall'} >
-            {isNavOpen ? 'Manage templates' : <FaEnvelope />}
+            {isNavOpen ? 'Medical Support' : <FaBriefcaseMedical/>}
             </NavLink>
             <NavLink to="/home/employees" >
-            {isNavOpen ? 'Manage Employees' : <MdAdminPanelSettings/>}
+            {isNavOpen ? 'Homecare Services' : <AiOutlineShoppingCart/>}
             
             
             
