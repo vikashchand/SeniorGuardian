@@ -1,0 +1,1 @@
+{"inputUnits":[2],"outputUnits":3,"inputs":{"0":{"dtype":"number","min":64.30163786256468,"max":395.60798997755177},"1":{"dtype":"number","min":332.9668202191235,"max":733.0455677290837}},"outputs":{"0":{"dtype":"string","min":0,"max":1,"uniqueValues":["standing","laying","falling"],"legend":{"standing":[1,0,0],"laying":[0,1,0],"falling":[0,0,1]}}},"isNormalized":true}
