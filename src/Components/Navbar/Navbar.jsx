@@ -28,13 +28,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`sidenav-container ${isNavOpen ? 'expanded' : 'minimized'}`}>
+    <div>
     <div className="menu">
-      <FaBars className="hamburger-icon" onClick={toggleNav} />
-    </div>
-    <div className="menu">
-    <FaBars className="hamburger-icons" />
+ 
+    <FaBars className="hamburger-icon"    onClick={toggleNav} />
+   <h1>OldCare Connect</h1>  
   </div>
+    <div className={`sidenav-container  ${isNavOpen ? 'expanded' : 'minimized'}`}>
+   
+  
     <NavLink to={'/home'}  className="active-link">
     {isNavOpen ? 'Home' : <AiFillHome />}
       
@@ -76,6 +78,8 @@ const Navbar = () => {
        
           
         
+
+        </div>
 
         </div>
   );

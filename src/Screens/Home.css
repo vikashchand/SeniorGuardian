@@ -9,16 +9,20 @@
   .content-container {
     flex: 1;
     width: 100%;
+    height: 100vh;
     
     
   }
+
   .heading-tab {
     background-color: #030305;
     color: white;
     padding: 0px;
     text-align: center;
-  position: fixed;
+    position: fixed;
     width: 100%;
+
+    z-index: 999999;
   
     
   }
@@ -46,4 +50,29 @@
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+
+
+
+   
+.home-container{
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.content-container {
+  flex: 1;
+  width: 100%;
+  height: 600px;
+  
+  
+}
+
+.heading-tab{
+  display: none;
+}
   }

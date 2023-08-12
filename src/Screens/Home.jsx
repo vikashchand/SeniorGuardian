@@ -12,11 +12,15 @@ const Home = () => {
     <div>
       
       <div className="home-container">
-      <div className="side-nav-container">
-       <Navbar/>
-      </div>
+      
+      <Navbar/>
+      
       <div className="content-container">
+      
+
       <div className="heading-tab">
+      
+      
         <h1>Old Care</h1>
       </div>
         <Routes>
