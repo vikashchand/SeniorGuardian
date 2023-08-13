@@ -4,7 +4,7 @@ const LandingPage = () => {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1>SeniorCare</h1>
+        <h1></h1>
         <p>Your trusted partner for medical assistance and more</p>
       </header>
       <section style={styles.section}>
