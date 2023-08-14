@@ -1,0 +1,124 @@
+/* LandingPage.css */
+.landing-page {
+    text-align: center;
+    padding: 0px;
+   
+  }
+  
+
+  
+  p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .feature {
+    width: 20%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
+    
+    text-align: center;
+   
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(10, 1, 1);            
+    box-shadow: 0 0 20px #110101;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  .feature-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+         
+ 
+
+
+ 
+
+  .feature:hover {
+  
+    cursor: pointer;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+  .footer {
+    margin-top: 40px;
+    padding: 20px 0;
+  
+
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-details {
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons a {
+    margin: 0 8px;
+    font-size: 24px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+
+  @media screen and (max-width: 768px) {
+
+
+    h2 {
+        font-size: 7x;
+        margin-bottom: 0px;
+      }
+      
+      p {
+        font-size: 10px;
+        color: #110202;
+        margin-bottom: 10px;
+      }
+    
+    .feature {
+        width: 30%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .feature-icon {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      
+  }

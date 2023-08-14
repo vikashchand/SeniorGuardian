@@ -37,10 +37,19 @@ const Navbar = () => {
     <div className={`sidenav-container  ${isNavOpen ? 'minimized' : 'expanded'}`}>
    
   
-    <NavLink to={'/home'}  className="active-link">
-    {isNavOpen ? 'Home' : <AiFillHome />}
-      
-    </NavLink>
+    
+   <br></br>
+    <br></br>
+    
+
+
+    <NavLink to={'/'} >
+       
+    {isNavOpen ? 'Home' : <AiFillHome/>}
+
+
+  </NavLink>
+  
     <NavLink to={'/home/activities'} >
        
     {isNavOpen ? 'Track Activities' : <CgGym/>}

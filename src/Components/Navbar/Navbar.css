@@ -3,23 +3,25 @@
     flex-direction: column;
       
    
-    background-color: rgb(31, 1, 25);
-    color: white;
+    background-color: rgb(34, 1, 1);
+    color: rgb(0, 0, 0);
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    height: 100vh;
+    height: 100%;
+
+    
     /* ... */
   }
   .hamburger-icons{
     display: none;
   }
   .sidenav-container.minimized {
-    width: 50px;
+    width: 90px;
   }
   
   .sidenav-container.expanded  {
-    width: 100px;
+    width: 50px;
    
   }
   .hamburger-icon {
@@ -35,7 +37,7 @@
   
   
   .menu {
-    background-color: #baa3a5;
+    background-color: #e1dada;
     display: flex;
     flex-direction: row;
  
@@ -66,37 +68,61 @@ align-items: center;
   justify-content: center;
   align-items: center;
 
+
 }
+
+         
+
+
+
+
+
+
+
   .sidenav-container a{
     text-decoration: none;
     width: 100%;
-    color: rgb(255, 255, 255);
-    font-size: 80%; /* Adjust the font size as needed */
+    color: rgb(16, 1, 1);
+    font-size: 100%; /* Adjust the font size as needed */
   
-    background-image: linear-gradient(to right, #f24f9e 0%, #c96db7  51%, #f857a6  100%);
+   
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+   
+            
+    box-shadow: 0 0 20px #eee;
+   
+  
+
+
+
+
+
+
+
     padding: 10px;
     padding-left: 0;
     padding-right: 0;
     border: 1px solid rgb(0, 0, 0);
     text-align: center;
-    text-transform: uppercase;
+   
     transition: 0.5s;
-    background-size: 200% auto;
-    color: rgb(204, 173, 255);            
+    color: rgb(10, 5, 19);            
     box-shadow: 0 0 5px #804f4f;
+    border-radius: 7px;
     
   }
   
   .sidenav-container a + a {
     margin-top: 5px;
     border: 1px solid rgb(18, 11, 11);
-    border-radius: 2px;
+    
   }
   
   
   .sidenav-container a.active-link {
     font-weight: lighter;
-    background-color: #3017ba;
+    background-color: #b7b2d3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   
@@ -104,6 +130,8 @@ align-items: center;
   
   
   .sidenav-container a:hover {
+    background-image: linear-gradient(to right, #7da3d7 0%, #5696f0  51%, #ad9ada  100%);
+    
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
@@ -166,11 +194,10 @@ align-items: center;
     .sidenav-container a{
       text-decoration: none;
       width: 100%;
-      color: rgb(255, 255, 255);
-      font-size: 80%; /* Adjust the font size as needed */
+     
+      font-size: 100%; /* Adjust the font size as needed */
     
-      background-image: linear-gradient(to right, #f24f9e 0%, #c96db7  51%, #f857a6  100%);
-      padding: 10px;
+     
       padding-left: 0;
       padding-right: 0;
       border: 1px solid rgb(0, 0, 0);
@@ -178,7 +205,7 @@ align-items: center;
       text-transform: uppercase;
       transition: 0.5s;
       background-size: 200% auto;
-      color: rgb(204, 173, 255);            
+         
       box-shadow: 0 0 5px #804f4f;
       
     }
