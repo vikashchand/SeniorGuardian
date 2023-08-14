@@ -1,7 +1,13 @@
 #SeniorGuardian
-a web app for old age community to avail the social inclusion benifits ,celebration and medical support from Ngos
+a web app for old age community to avail the social inclusion benifits ,health and medical support from Ngos
 
-![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/72b59333-64ca-4fd5-8218-9668a6ed3238)
-![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/ffe3b430-f528-4f37-b5ae-c4de121156ce)
-![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/6872db0c-43fa-49ae-b308-240a06438fcd)
-![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/d3610ada-f4de-42f9-a7de-3a72fd5e56eb)
+![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/1d70900c-e1a4-4025-9895-1fea269a5cc4)
+
+#Fall Detection module
+
+![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/76f0941f-8a93-462a-8545-2275767fc05d)
+![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/72280fdf-c67c-40d6-8f5e-3edc442f56f1)
+
+#Responsive on all devices
+
+![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/d2609a63-d322-4541-bc87-b4dc96cd05ea)
