@@ -41,7 +41,7 @@ const Navbar = () => {
     {isNavOpen ? 'Home' : <AiFillHome />}
       
     </NavLink>
-    <NavLink to={'/home/Customers'} >
+    <NavLink to={'/home/activities'} >
        
     {isNavOpen ? 'Track Activities' : <CgGym/>}
 
@@ -53,7 +53,7 @@ const Navbar = () => {
             <NavLink to={'/home/medical'} >
             {isNavOpen ? 'Medical Support' : <FaBriefcaseMedical/>}
             </NavLink>
-            <NavLink to="/home/employees" >
+            <NavLink to="/home/services" >
             {isNavOpen ? 'Homecare Services' : <AiOutlineShoppingCart/>}
             
             
