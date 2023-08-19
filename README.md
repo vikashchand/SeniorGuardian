@@ -1,5 +1,5 @@
 # SeniorGuardian
-a web app for old age community to avail the social inclusion benifits ,health and medical support from Ngos
+A web app for old age community to avail the social inclusion benifits ,health and medical support from Ngos
 
 ![image](https://github.com/vikashchand/SeniorGuardian/assets/72156896/1d70900c-e1a4-4025-9895-1fea269a5cc4)
 
