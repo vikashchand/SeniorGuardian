@@ -1,0 +1,74 @@
+.Homecareservices{
+    height: 100vh;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    
+  }
+  
+.feature{
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
+    
+    text-align: center;
+   
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(10, 1, 1);            
+    box-shadow: 0 0 20px #110101;
+    border-radius: 10px;
+    
+}
+
+.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+
+  }
+
+
+@media screen and (max-width: 768px) {
+
+
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 1px;
+      }
+      
+    .feature{
+      
+        margin: 10px;
+        margin-bottom: 10px;
+       height: auto;
+       width: auto;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    
+        background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
+        
+        text-align: center;
+       
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: rgb(10, 1, 1);            
+        box-shadow: 0 0 20px #110101;
+        border-radius: 10px;
+        
+    }
+
+}
