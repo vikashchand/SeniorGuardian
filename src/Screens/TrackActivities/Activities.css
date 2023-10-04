@@ -1,10 +1,18 @@
 /* Activity type card style */
 .activity{
+  text-align: center;
+  padding: 0px;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+   
+   
 }
 
 .activity-types{
     display: flex;
+  padding-left: 10%;
+    
     
 }
 .activity-type {

@@ -85,9 +85,9 @@ const LandingPage = () => {
       <footer className="footer">
         <div className="contact-details">
           <h3>Contact Us</h3>
-          <p>Email: info@oldcareconnect.com</p>
-          <p>Phone: +1 (123) 456-7890</p>
-          <p>Address: 123 Elderly Street, Senior City</p>
+          <p>Email: tarp</p>
+          <p>Phone: +91 1213232322121</p>
+          <p>Address: Vellore</p>
         
         </div>
        
