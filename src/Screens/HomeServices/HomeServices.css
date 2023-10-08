@@ -1,17 +1,22 @@
 .Homecareservices{
-    height: 100vh;
-    text-align: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 400px;
+  padding-left: 40px;
 }
 
 .features {
     display: flex;
+  
+    justify-content: center;
     
   }
   
 .feature{
-    width: 30%;
+    width: 10%;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -36,10 +41,90 @@
 
   }
 
+.service-form{
 
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
+        
+  width: 90%;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid #030000;
+    border-radius: 5px;
+    
+
+
+}
+
+.btn{
+  width: 10%;
+   
+    padding: 10px;
+    align-self: center;
+    border: 1px solid #030000;
+    border-radius: 5px;
+}
+
+
+form{
+  width: 100%;
+  display: flex;
+  
+  padding: 10px;
+
+    
+}
+
+.form-group{
+   width: 100%;
+  display: flex;
+  
+  padding: 10px;
+}
+.n{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0px; 
+   
+
+}
+input{
+
+  display: flex;
+  
+  width: 50%;
+  
+  border: 2px solid #030000;
+  border-radius: 2px;
+ 
+}
+
+textarea{
+  display: flex;
+  
+  width: 100%;
+  height: 100%;
+  
+  border: 1px solid #030000;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+.error{
+  text-align: start;
+  font-size: 10px;
+}
 @media screen and (max-width: 768px) {
 
-
+  .Homecareservices{
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
     .features {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -70,5 +155,91 @@
         border-radius: 10px;
         
     }
+
+
+
+    
+.service-form{
+
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+    
+    border: 1px solid #030000;
+    border-radius: 5px;
+    
+
+
+}
+
+.service-form>h2{
+  text-align: center;
+  font-size: smaller;
+}
+
+.error{
+  font-size: 10px;
+  text-align: center;
+}
+
+
+
+form{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+ 
+
+    
+}
+
+.form-group{
+   width: 90%;
+  display: flex;
+  margin: 0px,0px,0px,0px;
+  padding: 2px;
+  text-align: center;
+}
+.n{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0px; 
+  text-align: center;
+   
+
+}
+input{
+
+  display: flex;
+  text-align: center;
+  width: 100%;
+  
+  border: 2px solid #030000;
+  border-radius: 6px;
+ 
+}
+
+textarea{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  
+  border: 1px solid #030000;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn{
+  width: 50%;
+   
+    padding: 10px;
+    align-self: center;
+    border: 1px solid #030000;
+    border-radius: 5px;
+}
 
 }

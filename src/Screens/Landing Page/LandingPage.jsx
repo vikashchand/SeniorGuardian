@@ -1,4 +1,5 @@
 import React from 'react';
+import './LandingPage.css';
 import {
   FaUserFriends,
   FaMedkit,
@@ -10,7 +11,7 @@ import {
   FaExclamationTriangle,
   FaTags,
 } from 'react-icons/fa';
-import './LandingPage.css';
+
 
 const LandingPage = () => {
   return (
@@ -21,22 +22,22 @@ const LandingPage = () => {
     
       <p>Your Elderly Assistance Platform</p>
 
-      <div className="features">
-        <div className="feature">
+      <div className="featuresl">
+        <div className="featurel">
           <FaUserFriends className="feature-icon" />
           <br></br>
          Social Interaction
           <p>Connect with like-minded people nearby.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaMedkit className="feature-icon" />
           <br></br>
          Medical Support
           <p>Receive medication reminders and health tips.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaDumbbell className="feature-icon" />
           <br></br>
           Health & Fitness
@@ -45,35 +46,35 @@ const LandingPage = () => {
 
        
 
-        <div className="feature">
+        <div className="featurel">
           <FaUsers className="feature-icon" />
           <br></br>
           Volunteer Assistance
           <p>Volunteers can help and connect with the elderly.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaUtensils className="feature-icon" />
           <br></br>
           Home Care Services
           <p>NGOs provide cooking, washing, and home assistance.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaBirthdayCake className="feature-icon" />
           <br></br>
           Organizing Parties
           <p>Celebrate with events and parties for the elderly.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaExclamationTriangle className="feature-icon" />
           <br></br>
           Fall Detection
           <p>Monitor falls with advanced detection systems.</p>
         </div>
 
-        <div className="feature">
+        <div className="featurel">
           <FaTags className="feature-icon" />
           <br></br>
           Special Discounts

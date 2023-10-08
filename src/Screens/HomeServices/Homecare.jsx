@@ -1,132 +1,192 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
 import './HomeServices.css';
+import {BiLogoWhatsapp} from 'react-icons/bi'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const HomeServices = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    description: '',
-    email: '',
-    dateTime: '',
-    selection: '',
-  });
-
-  const [serviceClicked, setServiceClicked] = useState(null);
-
-  const handleServiceClick = (serviceName) => {
-    setServiceClicked(serviceName);
-  };
-
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here, you can send the form data to an API or perform any desired action
-    console.log(formData);
-    // You can also send an email with the form data
-    // Implementing email sending functionality is beyond the scope of this example.
-  };
-
   const services = [
     {
       name: 'Shopping Assistance',
-      whatsapp: '1234567890', // Replace with the actual WhatsApp number
+      whatsapp: '8448520755', // Replace with the actual WhatsApp number
     },
     {
       name: 'Birthday/Social Gathering Organization',
-      whatsapp: '9876543210', // Replace with the actual WhatsApp number
+      whatsapp: '8448520755', // Replace with the actual WhatsApp number
     },
     {
       name: 'Mental Support from NGOs',
-      whatsapp: '5555555555', // Replace with the actual WhatsApp number
+      whatsapp: '9655836135', // Replace with the actual WhatsApp number
     },
     {
       name: 'Cooking Assistance',
-      whatsapp: '8888888888', // Replace with the actual WhatsApp number
+      whatsapp: '6374783198', // Replace with the actual WhatsApp number
     },
     {
       name: 'Cleaning Assistance',
-      whatsapp: '9999999999', // Replace with the actual WhatsApp number
+      whatsapp: '6374783198', // Replace with the actual WhatsApp number
     },
     {
       name: 'Home Assistance',
-      whatsapp: '7777777777', // Replace with the actual WhatsApp number
+      whatsapp: '7551067902', // Replace with the actual WhatsApp number
     },
   ];
 
+  const serviceSchema = Yup.object().shape({
+    name: Yup.string().required('Name is required'),
+    phone: Yup.string()
+      .required('Phone number is required')
+      .matches(/^\d+$/, 'Phone number must contain only digits'),
+    email: Yup.string().email('Invalid email format'),
+    description: Yup.string().required('Description is required'),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      phone: '',
+      description: '',
+      email: '',
+      dateTime: '',
+      selection: '',
+    },
+    validationSchema: serviceSchema,
+    onSubmit: async (values) => {
+      try {
+        // Send the form data to the backend API for storage
+       
+        const response = await axios.post('http://localhost:5000/api/submitForm', values);
+
+        
+        if (response.status === 200) {
+          // Form data was successfully sent to the backend
+          console.log('Form data sent successfully');
+          toast.success("Form data sent successfully");
+        } else {
+          console.error('Failed to send form data to the backend');
+          toast("Failed to send form data to the backend");
+          
+        }
+      } catch (error) {
+        console.error('An error occurred while sending form data:', error);
+        toast.error(error);
+      }
+
+      // You can also send a WhatsApp message here using the WhatsApp API
+      // ...
+    },
+  });
+
+ 
+
+  const handleServiceClick = (serviceName) => {
+    formik.setFieldValue('selection', serviceName);
+  };
+
   return (
     <div className="Homecareservices">
-    <br></br>
-    <br></br>
-    <br></br>
+      <br />
+      <br />
+      <br />
+      <h1>Tap on whatsapp to talk Directly if emergency else fill the form </h1>
+      <br/>
+      
       <div className='service-list features'>
+      
         {services.map((service) => (
-          <div 
-  key={service.name}
-  className={`feature ${serviceClicked === service.name ? 'active' : ''}`}
-  onClick={() => handleServiceClick(service.name)}
->
-  {service.name}
-</div>
+          <div
+            key={service.name}
+            className={`feature ${formik.values.selection === service.name ? 'active' : ''}`}
+            onClick={() => handleServiceClick(service.name)}
+          >
+            {service.name}
 
-        ))}
-      </div>
+             <button
+              className="whatsapp-button"
 
-      {serviceClicked && (
-        <div className="service-form">
-          <h2>Service Request Form - {serviceClicked}</h2>
-          <form onSubmit={handleSubmit}>
-          <div className='n'>
-            <div className="form-group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleFormChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email (optional)"
-              value={formData.email}
-              onChange={handleFormChange}
-            />
+              onClick={() => {
+                // Replace '91xxxxxxxxxx' with the actual WhatsApp number for this service
+                const whatsappNumber = service.whatsapp;
+                window.open(`http://wa.me/${whatsappNumber}`, '_blank');
+              }} 
+            >
+            <BiLogoWhatsapp/></button>
+            <ToastContainer> </ToastContainer>
           </div>
+        ))}
+
+
+
+      </div>
+      
+    
+
+      {formik.values.selection && (
+        <div className="service-form">
+          <h2>Service Request Form - {formik.values.selection}</h2>
+          <form onSubmit={formik.handleSubmit}>
+            <div className='n'>
+              <div className="form-group">
+              
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  
+                />
+
+                
+              </div>
+              {formik.touched.name && formik.errors.name ? (
+                <div className="error">{formik.errors.name}</div>
+              ) : null}
+              <div className="form-group">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formik.values.phone}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+               
+              </div>
+              {formik.touched.phone && formik.errors.phone ? (
+                <div className="error">{formik.errors.phone}</div>
+              ) : null}
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email (optional)"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
             </div>
             <div className="form-group">
               <textarea
                 name="description"
                 placeholder="Description of Service Required"
-                value={formData.description}
-                onChange={handleFormChange}
-                required
+                value={formik.values.description}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+           
             </div>
+          
            
-           
-            <button type="submit">Submit</button>
           </form>
-          <p>Contact via WhatsApp: {services.find((service) => service.name === serviceClicked).whatsapp}</p>
+          <button className='btn' type="submit">Submit</button>
         </div>
       )}
     </div>
