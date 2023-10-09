@@ -51,7 +51,7 @@ const Activities = () => {
 
     try {
       // Send a POST request to add the activity to the backend
-      const response = await axios.post('http://localhost:5000/api/activities', newActivity);
+      const response = await axios.post('https://seniorguardianbackend.vercel.app/api/activities', newActivity);
 
       // Update the local state with the new activity
       setActivities([...activities, response.data]);
@@ -67,7 +67,7 @@ const Activities = () => {
   const deleteActivity = async (id) => {
     try {
       // Send a DELETE request to delete the activity from the backend
-      await axios.delete(`http://localhost:5000/api/activities/${id}`);
+      await axios.delete(`https://seniorguardianbackend.vercel.app/api/activities/${id}`);
 
       // Update the local state to remove the deleted activity
       const updatedActivities = activities.filter((activity) => activity._id !== id);
@@ -81,7 +81,7 @@ const Activities = () => {
   const fetchActivities = async (activityType) => {
     try {
       // Send a GET request to fetch activities from the backend based on the type
-      const response = await axios.get('http://localhost:5000/api/activities', {
+      const response = await axios.get('https://seniorguardianbackend.vercel.app/api/activities', {
         params: { type: activityType }, // Pass the activity type as a query parameter
       });
   
