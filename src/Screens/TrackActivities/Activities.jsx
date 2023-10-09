@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import med from "../../assets/med.png"
 import calorie from "../../assets/calorie.png"
-import todo from "../../assets/todo.png"
+import todo from "../../assets/imp.png"
 import physical from "../../assets/physical activities.jfif"
 
 const Activities = () => {
