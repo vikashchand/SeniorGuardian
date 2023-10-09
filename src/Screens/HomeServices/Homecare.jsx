@@ -16,7 +16,7 @@ const HomeServices = () => {
       whatsapp: '8448520755', // Replace with the actual WhatsApp number
     },
     {
-      name: 'Birthday/Social Gathering Organization',
+      name: 'Birthday/Social  Organization',
       whatsapp: '8448520755', // Replace with the actual WhatsApp number
     },
     {
@@ -32,7 +32,7 @@ const HomeServices = () => {
       whatsapp: '6374783198', // Replace with the actual WhatsApp number
     },
     {
-      name: 'Home Assistance',
+      name: 'Home Care Assistance',
       whatsapp: '7551067902', // Replace with the actual WhatsApp number
     },
   ];
@@ -40,8 +40,9 @@ const HomeServices = () => {
   const serviceSchema = Yup.object().shape({
     name: Yup.string().required('Name is required'),
     phone: Yup.string()
-      .required('Phone number is required')
-      .matches(/^\d+$/, 'Phone number must contain only digits'),
+    .required('Phone number is required')
+    .matches(/^\d{1,10}$/, 'Phone number must contain between 1 to 10 digits'),
+  
     email: Yup.string().email('Invalid email format'),
     description: Yup.string().required('Description is required'),
   });
@@ -93,7 +94,7 @@ const HomeServices = () => {
       <br />
       <br />
       <br />
-      <h1>Tap on whatsapp to talk Directly if emergency else fill the form </h1>
+      <h1>"For urgent matters, WhatsApp us. Otherwise, use the form." </h1>
       <br/>
       
       <div className='service-list features'>

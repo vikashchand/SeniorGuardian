@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Activities.css';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+
 
 import med from "../../assets/med.png"
 import calorie from "../../assets/calorie.png"
@@ -22,6 +22,7 @@ const Activities = () => {
   };
   const activityInfo = {
     'Physical Activities': {
+      
       image: physical,
     },
     'Important Tasks': {
@@ -99,7 +100,10 @@ const Activities = () => {
 
   return (
     <div className='activity'>
-      <h2>Activities Tracker</h2>
+    
+    <br></br>
+    <br></br>
+      <h2>"Track and Manage Your Activities with Ease"</h2>
       <div>
         <h3>Select Activity Type:</h3>
         <div className="activity-types">
@@ -109,6 +113,7 @@ const Activities = () => {
               className={`activity-type ${selectedActivity === type ? 'selected' : ''}`}
               onClick={() => selectActivityType(type)}
             >
+            <h4></h4>
               <img className='pic' src={activityInfo[type].image} alt={type} />
             </div>
           ))}
@@ -132,27 +137,19 @@ const Activities = () => {
             />
             <label className='clock-label'>⏰ Select Time</label>
           </div>
-          <label>
-            Set Reminder:
-            <input
-              className='check'
-              type="checkbox"
-              checked={reminder}
-              onChange={() => setReminder(!reminder)}
-            />
-          </label>
+         
           <button onClick={addActivity}>Add Activity</button>
         </div>
       )}
-      <ul>
+      <div className='list'>
         {activities.map((activity) => (
           <li key={activity._id}>
-            {activity.type}: {activity.name} at {activity.time}
-            {activity.reminder && <span> - Reminder Set</span>}
+             {activity.name} at {activity.time}
+           
             <button onClick={() => deleteActivity(activity._id)}>Delete</button>
           </li>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
