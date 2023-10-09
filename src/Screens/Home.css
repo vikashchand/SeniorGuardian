@@ -1,24 +1,11 @@
 .home-container {
   display: flex;
-  background: url('../assets/grid.svg');
+  background: url('../assets/k.webp');
   animation: colorChange 20s infinite alternate;
   height: 100%;
+  background-color: #e9e9e9;
 }
 
-@keyframes colorChange {
-  0% {
-    background-color: rgb(110, 158, 240);
-  }
-  25% {
-    background-color: rgb(209, 97, 132);
-  }
-  75% {
-    background-color: rgb(166, 154, 243);
-  }
-  100% {
-    background-color: rgb(230, 117, 166);
-  }
-}
 
   
   .content-container {

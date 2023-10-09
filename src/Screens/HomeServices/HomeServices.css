@@ -22,8 +22,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 
-    background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
-    
+    background-color: #fff;
     text-align: center;
    
     transition: 0.5s;
@@ -35,7 +34,7 @@
 }
 
 .active {
-    background-color: #007bff;
+    background-color: #a1cefd;
     color: #fff;
     border-color: #007bff;
 
@@ -45,13 +44,11 @@
 
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
-        
+  
   width: 90%;
     margin: 50px;
     padding: 10px;
-    border: 1px solid #030000;
-    border-radius: 5px;
+   
     
 
 
@@ -86,7 +83,7 @@ form{
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-right: 0px; 
+  padding-right: 10px; 
    
 
 }
@@ -150,8 +147,7 @@ h1{
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
     
-        background-image: linear-gradient(to right, #a5d1f8 0%, #71aff5  51%, #5094ed  100%);
-        
+      
         text-align: center;
        
         transition: 0.5s;
