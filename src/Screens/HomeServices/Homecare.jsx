@@ -184,10 +184,10 @@ const HomeServices = () => {
               />
            
             </div>
-          
+            <button className='btn' type="submit">Submit</button>
            
           </form>
-          <button className='btn' type="submit">Submit</button>
+       
         </div>
       )}
     </div>
